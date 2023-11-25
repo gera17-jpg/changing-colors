@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    
+    <button id='btn' style='padding:50px;background-color:green' onclick='myFunc()'>
+        Click Me to Change Colors       
+    </button>
+
+    <script>
+        function myFunc(){
+            const colors = ['green', 'red', 'orange', 'blue', 'violet', 'pink', 'indigo', 'brown', 'white'];
+            const randomNumber = Math.floor(Math.random() * colors.length);
+            document.getElementById('btn').style.backgroundColor = colors[randomNumber];
+        }
+    </script>
+</body>
+</html>
