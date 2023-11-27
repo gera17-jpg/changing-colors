@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-    
-    <button id='btn' style='padding:50px;background-color:green' onclick='myFunc()'>
+    <head>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        
+        <button id='btn' onclick='myFunc()'>
         Click Me to Change Colors       
-    </button>
+        </button>
+        <button class='reset' onclick='reset()'>Reset</button>
 
-    <script>
-        function myFunc(){
-            const colors = ['green', 'red', 'orange', 'blue', 'violet', 'pink', 'indigo', 'brown', 'white'];
-            const randomNumber = Math.floor(Math.random() * colors.length);
-            document.getElementById('btn').style.backgroundColor = colors[randomNumber];
-        }
-    </script>
-</body>
+        <script>
+            const defaultColor = 'aqua'; // Define the default color outside the function
+
+            function myFunc(){
+                const colors = ['green', 'red', 'orange', 'blue', 'violet', 'pink', 'indigo', 'brown', 'white'];
+                const randomNumber = Math.floor(Math.random() * colors.length);
+                document.getElementById('btn').style.backgroundColor = colors[randomNumber];
+            }
+
+            function reset(){
+                document.getElementById('btn').style.backgroundColor = defaultColor;
+            }
+        </script>
+
+    </body>
 </html>
